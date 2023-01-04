@@ -1,15 +1,17 @@
 {
   "name": "nextjs-blog-lib",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "NextJS library to create blogs",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
   "repository": "https://github.com/idmontie/nextjs-blog-lib",
   "license": "MIT",
   "keywords": [],
   "scripts": {
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.lib.json",
+    "build:module": "tsc -p tsconfig.module.json",
     "lint": "run-s lint:*",
     "lint:prettier": "prettier \"src/**/*.ts(x)?\" --check",
     "lint:lint": "eslint src --ext .ts --ext .tsx",
@@ -60,6 +62,7 @@
   },
   "files": [
     "build/main",
+    "build/module",
     "!**/*.spec.*",
     "!**/*.json",
     "CHANGELOG.md",
