@@ -6,6 +6,20 @@
     "module": "esnext"
   },
   "exclude": [
-    "node_modules/**"
+    "node_modules/**",
+    "jest.config.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.test.js",
+    "**/*.spec.jsx",
+    "**/*.test.jsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.spec.json"
+    }
   ]
 }
