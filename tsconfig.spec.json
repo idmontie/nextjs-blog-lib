@@ -1,11 +1,7 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "composite": true,
-        "module": "commonjs",
-        "types": ["jest", "node"],
-        "jsx": "react",
-        "moduleResolution": "node"
+        "types": ["jest", "node"]
     },
     "include": [
         "./jest.config.ts",

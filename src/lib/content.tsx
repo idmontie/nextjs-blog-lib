@@ -85,7 +85,7 @@ export function createExcerpt(content: string, options: BlogOptions) {
  * Create a HTML string from a markdown string, and
  * support MDX syntax with imports. This is used to
  * generate server-side rendered HTML for blog posts.
- * 
+ *
  * @ignore
  */
 export async function createHtmlStringFromMarkdown(
