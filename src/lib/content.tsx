@@ -1,12 +1,10 @@
 import fs from "fs";
 import { join } from "path";
 
-import { compile, run } from "@mdx-js/mdx";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import * as runtime from "react/jsx-runtime";
 
-import { BlogOptions, MdxRenderType } from "./types";
+import { BlogOptions } from "./types";
 
 /**
  * Rewrite all media images to public folder paths
@@ -95,14 +93,8 @@ export async function createHtmlStringFromMarkdown(
     // Replace <!--.*--> with empty string
     markdown = markdown.replace(/<!--.*-->/g, "");
 
-    const code = String(
-        await compile(markdown, {
-            outputFormat: "function-body",
-            useDynamicImport: true,
-        })
-    );
-
-    const Component = await toJsx(code);
+    const code = await options.mdx.compile(markdown);
+    const Component = await toJsx(code, options);
 
     const rendered = String(
         ReactDOMServer.renderToString(
@@ -119,13 +111,6 @@ export async function createHtmlStringFromMarkdown(
 /**
  * @ignore
  */
-async function toJsx(code: string) {
-    const scope = {};
-
-    const { default: Component } = await run(code, {
-        ...runtime,
-        scope,
-    });
-
-    return Component as MdxRenderType;
+async function toJsx(code: string, options: BlogOptions) {
+    return options.mdx.run(code);
 }

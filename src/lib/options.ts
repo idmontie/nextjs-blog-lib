@@ -18,5 +18,11 @@ export const defaultOptions: BlogOptions = {
     truncateLength: 100,
     mdx: {
         components: {},
+        compile: async () => {
+            throw new Error("MDX compile function not set");
+        },
+        run: async () => {
+            throw new Error("MDX run function not set");
+        },
     },
 };

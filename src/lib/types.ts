@@ -10,6 +10,8 @@ export interface BlogOptions {
     mdx: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         components: Record<string, any>;
+        compile: (mdx: string) => Promise<string>;
+        run: (code: string) => Promise<MdxRenderType>;
     };
 }
 
