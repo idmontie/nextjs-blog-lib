@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>nextjs-blog-lib</title>
+	<meta name="description" content="Documentation for nextjs-blog-lib">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">nextjs-blog-lib</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>nextjs-blog-lib</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#nextjs-blog-lib" id="nextjs-blog-lib" style="color: inherit; text-decoration: none;">
+					<h1>nextjs-blog-lib</h1>
+				</a>
+				<p>NextJS library to create blogs</p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>Install with npm:</p>
+				<pre><code class="language-bash">npm install nextjs-blog-lib
+</code></pre>
+				<p>Create a blog instance:</p>
+				<pre><code class="language-ts">
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> { BlogOptions } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;nextjs-blog-lib&#x27;</span>;
+<span class="hljs-keyword">import</span> { createBlog } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;nextjs-blog-lib&#x27;</span>;
+
+<span class="hljs-keyword">const</span> blogOptions: Partial&lt;BlogOptions&gt; = {
+    <span class="hljs-comment">// Override default options</span>
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> blog = createBlog(blogOptions);
+</code></pre>
+				<p>Use the blog instance on a page:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getStaticProps: GetStaticProps = <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> posts = <span class="hljs-keyword">await</span> blog.getAllPostsByDate();
+
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">props</span>: {
+            posts,
+        },
+    };
+};
+</code></pre>
+				<a href="#using-mdx-jsmdx" id="using-mdx-jsmdx" style="color: inherit; text-decoration: none;">
+					<h2>Using @mdx-js/mdx</h2>
+				</a>
+				<p>Since <code>@mdx-js/mdx</code> is an ESM package, I left it out of this package. Install it in your consuming project and use it like so:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> compiler = <span class="hljs-keyword">async</span> (mdx: <span class="hljs-built_in">string</span>) =&gt; {
+    <span class="hljs-keyword">const</span> inter = <span class="hljs-built_in">String</span>(
+        <span class="hljs-keyword">await</span> compile(mdx, {
+            <span class="hljs-attr">outputFormat</span>: <span class="hljs-string">&quot;function-body&quot;</span>,
+            <span class="hljs-attr">useDynamicImport</span>: <span class="hljs-literal">true</span>,
+        })
+    );
+    <span class="hljs-keyword">return</span> inter.replaceAll(<span class="hljs-string">&quot;jsxDEV&quot;</span>, <span class="hljs-string">&quot;jsx&quot;</span>);
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> runner = <span class="hljs-keyword">async</span> (code: <span class="hljs-built_in">string</span>) =&gt; {
+    <span class="hljs-keyword">const</span> scope = {};
+
+    <span class="hljs-keyword">const</span> { <span class="hljs-attr">default</span>: Component } = <span class="hljs-keyword">await</span> run(code, {
+        ...runtime,
+        scope,
+    });
+
+    <span class="hljs-comment">// eslint-disable-next-line @typescript-eslint/no-unsafe-return</span>
+    <span class="hljs-keyword">return</span> Component;
+};
+
+<span class="hljs-keyword">const</span> blogOptions: Partial&lt;BlogOptions&gt; = {
+    <span class="hljs-attr">mdx</span>: {
+        <span class="hljs-attr">compile</span>: compiler,
+        <span class="hljs-attr">run</span>: runner,
+    },
+};
+</code></pre>
+				<p>This also gives you flexibility to use other plugins with <code>@mdx-js/mdx</code>.</p>
+				<a href="#docs" id="docs" style="color: inherit; text-decoration: none;">
+					<h2>Docs</h2>
+				</a>
+				<p>See the docs on our <a href="https://idmontie.github.io/nextjs-blog-lib">Github page</a>.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>MIT License. See <a href="LICENSE">LICENSE</a> for more information.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/blogoptions.html" class="tsd-kind-icon">Blog<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/post.html" class="tsd-kind-icon">Post</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#mdxrendertype" class="tsd-kind-icon">Mdx<wbr>Render<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getallposts" class="tsd-kind-icon">get<wbr>All<wbr>Posts</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getpostbyslug" class="tsd-kind-icon">get<wbr>Post<wbr>BySlug</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#createblog" class="tsd-kind-icon">create<wbr>Blog</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getallpostsbydate" class="tsd-kind-icon">get<wbr>All<wbr>Posts<wbr>ByDate</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getnextpost" class="tsd-kind-icon">get<wbr>Next<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getpostslugs" class="tsd-kind-icon">get<wbr>Post<wbr>Slugs</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getpreviouspost" class="tsd-kind-icon">get<wbr>Previous<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

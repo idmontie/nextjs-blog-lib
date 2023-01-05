@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>nextjs-blog-lib</title>
+	<meta name="description" content="Documentation for nextjs-blog-lib">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">nextjs-blog-lib</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>nextjs-blog-lib</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/blogoptions.html" class="tsd-kind-icon">Blog<wbr>Options</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/post.html" class="tsd-kind-icon">Post</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="globals.html#mdxrendertype" class="tsd-kind-icon">Mdx<wbr>Render<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#getallposts" class="tsd-kind-icon">get<wbr>All<wbr>Posts</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getpostbyslug" class="tsd-kind-icon">get<wbr>Post<wbr>BySlug</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#createblog" class="tsd-kind-icon">create<wbr>Blog</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getallpostsbydate" class="tsd-kind-icon">get<wbr>All<wbr>Posts<wbr>ByDate</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getnextpost" class="tsd-kind-icon">get<wbr>Next<wbr>Post</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getpostslugs" class="tsd-kind-icon">get<wbr>Post<wbr>Slugs</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getpreviouspost" class="tsd-kind-icon">get<wbr>Previous<wbr>Post</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="mdxrendertype" class="tsd-anchor"></a>
+					<h3>Mdx<wbr>Render<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Mdx<wbr>Render<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">React.FC</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>components<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/types.ts#L32">lib/types.ts:32</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getallposts" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>All<wbr>Posts</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Posts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = memoize(async function (options: BlogOptions) {const slugs &#x3D; getPostSlugs(options);return await Promise.all(slugs.map((slug) &#x3D;&gt; getPostBySlug(slug, options)));})</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L85">lib/posts.ts:85</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Get a list of all posts.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getpostbyslug" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Post<wbr>BySlug</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>BySlug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = memoize(async function (slug: string,options: BlogOptions): Promise&lt;Post&gt; {const folderPath &#x3D; join(options.postsDirectory, slug);const fullPath &#x3D; join(folderPath, &quot;index.mdx&quot;);const backupPath &#x3D; join(folderPath, &quot;index.md&quot;);let filePath;// Check if path is a folder or a fileif (fs.lstatSync(folderPath).isFile()) {filePath &#x3D; folderPath;} else if (fs.existsSync(fullPath)) {filePath &#x3D; fullPath;} else {filePath &#x3D; backupPath;}const fileContents &#x3D; fs.readFileSync(filePath, &quot;utf8&quot;);const newContents &#x3D; options.rewriteMediaUrls? rewriteMedias(folderPath,slug,fileContents,options.rewriteMediaUrls.mediaDirectory): fileContents;const { data, content } &#x3D; matter(newContents);const excerpt &#x3D; createExcerpt(content, options);const { rendered: excerptRendered, code: excerptCode } &#x3D;await createHtmlStringFromMarkdown(excerpt || &quot;&quot;, options);const { rendered: contentRendered, code: contentCode } &#x3D;await createHtmlStringFromMarkdown(content || &quot;&quot;, options);const item: Post &#x3D; {slug: slug,date: slug.split(&quot;-&quot;).slice(0, 3).join(&quot;-&quot;),title: data[&quot;title&quot;] ?? slug,frontmatter: data,contentRaw: content,contentHTML: contentRendered,contentCode,excerptRaw: excerpt,excerptHTML: excerptRendered,excerptCode,};return item;})</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L20">lib/posts.ts:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Get a post by its slug.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd></dd>
+							<dt>param</dt>
+							<dd></dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="createblog" class="tsd-anchor"></a>
+					<h3>create<wbr>Blog</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Blog<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>getAllPostsByDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getPostBySlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/blog.ts#L16">lib/blog.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a blog instance with the given options.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>getAllPostsByDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getPostBySlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>blog instance</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>get<wbr>All<wbr>Posts<wbr>ByDate<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Posts<wbr>ByDate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/blog.ts#L33">lib/blog.ts:33</a></li>
+												</ul>
+											</aside>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>get<wbr>Post<wbr>BySlug<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>BySlug<span class="tsd-signature-symbol">(</span>slug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">; </span>post<span class="tsd-signature-symbol">: </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">; </span>previous<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/blog.ts#L20">lib/blog.ts:20</a></li>
+												</ul>
+											</aside>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>slug: <span class="tsd-signature-type">string</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">; </span>post<span class="tsd-signature-symbol">: </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">; </span>previous<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getallpostsbydate" class="tsd-anchor"></a>
+					<h3>get<wbr>All<wbr>Posts<wbr>ByDate</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Posts<wbr>ByDate<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L90">lib/posts.ts:90</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getnextpost" class="tsd-anchor"></a>
+					<h3>get<wbr>Next<wbr>Post</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Next<wbr>Post<span class="tsd-signature-symbol">(</span>slug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L95">lib/posts.ts:95</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>slug: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getpostslugs" class="tsd-anchor"></a>
+					<h3>get<wbr>Post<wbr>Slugs</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>Slugs<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L78">lib/posts.ts:78</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a list of all post slugs.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getpreviouspost" class="tsd-anchor"></a>
+					<h3>get<wbr>Previous<wbr>Post</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Previous<wbr>Post<span class="tsd-signature-symbol">(</span>slug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/posts.ts#L105">lib/posts.ts:105</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>slug: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="interfaces/blogoptions.html" class="tsd-signature-type">BlogOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L6">lib/options.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Default options for your blog.</p>
+						</div>
+					</div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.postsdirectory" class="tsd-anchor"></a>
+						<h3>posts<wbr>Directory</h3>
+						<div class="tsd-signature tsd-kind-icon">posts<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L10">lib/options.ts:10</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The directory where your blog posts are stored.</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.truncatelength" class="tsd-anchor"></a>
+						<h3>truncate<wbr>Length</h3>
+						<div class="tsd-signature tsd-kind-icon">truncate<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L18">lib/options.ts:18</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.truncatemarker" class="tsd-anchor"></a>
+						<h3>truncate<wbr>Marker</h3>
+						<div class="tsd-signature tsd-kind-icon">truncate<wbr>Marker<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&lt;!--truncate--&gt;&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L17">lib/options.ts:17</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultoptions.mdx" class="tsd-anchor"></a>
+						<h3>mdx</h3>
+						<div class="tsd-signature tsd-kind-icon">mdx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L19">lib/options.ts:19</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultoptions.mdx.components" class="tsd-anchor"></a>
+							<h3>components</h3>
+							<div class="tsd-signature tsd-kind-icon">components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L20">lib/options.ts:20</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-type-declaration">
+								<h4>Type declaration</h4>
+								<ul class="tsd-parameters">
+								</ul>
+							</div>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+							<a name="defaultoptions.mdx.compile" class="tsd-anchor"></a>
+							<h3>compile</h3>
+							<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+								<li class="tsd-signature tsd-kind-icon">compile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L21">lib/options.ts:21</a></li>
+										</ul>
+									</aside>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+							<a name="defaultoptions.mdx.run" class="tsd-anchor"></a>
+							<h3>run</h3>
+							<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+								<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L24">lib/options.ts:24</a></li>
+										</ul>
+									</aside>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultoptions.rewritemediaurls" class="tsd-anchor"></a>
+						<h3>rewrite<wbr>Media<wbr>Urls</h3>
+						<div class="tsd-signature tsd-kind-icon">rewrite<wbr>Media<wbr>Urls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L11">lib/options.ts:11</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultoptions.rewritemediaurls.mediadirectory" class="tsd-anchor"></a>
+							<h3>media<wbr>Directory</h3>
+							<div class="tsd-signature tsd-kind-icon">media<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/32df31d/src/lib/options.ts#L15">lib/options.ts:15</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The directory where your media files that are found in markdown should get copied to.</p>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals current ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/blogoptions.html" class="tsd-kind-icon">Blog<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/post.html" class="tsd-kind-icon">Post</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#mdxrendertype" class="tsd-kind-icon">Mdx<wbr>Render<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getallposts" class="tsd-kind-icon">get<wbr>All<wbr>Posts</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getpostbyslug" class="tsd-kind-icon">get<wbr>Post<wbr>BySlug</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#createblog" class="tsd-kind-icon">create<wbr>Blog</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getallpostsbydate" class="tsd-kind-icon">get<wbr>All<wbr>Posts<wbr>ByDate</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getnextpost" class="tsd-kind-icon">get<wbr>Next<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getpostslugs" class="tsd-kind-icon">get<wbr>Post<wbr>Slugs</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getpreviouspost" class="tsd-kind-icon">get<wbr>Previous<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
