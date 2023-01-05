@@ -112,7 +112,5 @@ export async function createHtmlStringFromMarkdown(
  * @ignore
  */
 async function toJsx(code: string, options: BlogOptions) {
-
     return options.mdx.run(code);
-
 }
