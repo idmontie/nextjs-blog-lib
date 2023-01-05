@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.3.0...v1.4.0) (2023-01-05)
+
+
+### Features
+
+* remove mdx package since its an esm module ([786b156](https://github.com/idmontie/nextjs-blog-lib/commit/786b156395dbc630ad734e9a65777e7b1e6ed591))
+
 ## [1.3.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.2.0...v1.3.0) (2023-01-04)
 
 
