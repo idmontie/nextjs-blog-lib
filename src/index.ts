@@ -1,2 +1,2 @@
-export type { Post, BlogOptions } from "./lib/types";
+export type { Post, BlogOptions, MdxRenderType } from "./lib/types";
 export { createBlog } from "./lib/blog";
