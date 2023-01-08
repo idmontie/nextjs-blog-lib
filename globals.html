@@ -114,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mdx<wbr>Render<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">React.FC</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>components<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/types.ts#L32">lib/types.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/types.ts#L33">lib/types.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Posts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = memoize(async function (options: BlogOptions) {const slugs &#x3D; getPostSlugs(options);return await Promise.all(slugs.map((slug) &#x3D;&gt; getPostBySlug(slug, options)));})</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L85">lib/posts.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L86">lib/posts.ts:86</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -139,10 +139,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="getpostbyslug" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Post<wbr>BySlug</h3>
-					<div class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>BySlug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = memoize(async function (slug: string,options: BlogOptions): Promise&lt;Post&gt; {const folderPath &#x3D; join(options.postsDirectory, slug);const fullPath &#x3D; join(folderPath, &quot;index.mdx&quot;);const backupPath &#x3D; join(folderPath, &quot;index.md&quot;);let filePath;// Check if path is a folder or a fileif (fs.lstatSync(folderPath).isFile()) {filePath &#x3D; folderPath;} else if (fs.existsSync(fullPath)) {filePath &#x3D; fullPath;} else {filePath &#x3D; backupPath;}const fileContents &#x3D; fs.readFileSync(filePath, &quot;utf8&quot;);const newContents &#x3D; options.rewriteMediaUrls? rewriteMedias(folderPath,slug,fileContents,options.rewriteMediaUrls.mediaDirectory): fileContents;const { data, content } &#x3D; matter(newContents);const excerpt &#x3D; createExcerpt(content, options);const { rendered: excerptRendered, code: excerptCode } &#x3D;await createHtmlStringFromMarkdown(excerpt || &quot;&quot;, options);const { rendered: contentRendered, code: contentCode } &#x3D;await createHtmlStringFromMarkdown(content || &quot;&quot;, options);const item: Post &#x3D; {slug: slug,date: slug.split(&quot;-&quot;).slice(0, 3).join(&quot;-&quot;),title: data[&quot;title&quot;] ?? slug,frontmatter: data,contentRaw: content,contentHTML: contentRendered,contentCode,excerptRaw: excerpt,excerptHTML: excerptRendered,excerptCode,};return item;})</span></div>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>BySlug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = memoize(async function (slug: string,options: BlogOptions): Promise&lt;Post&gt; {const folderPath &#x3D; join(options.postsDirectory, slug);const fullPath &#x3D; join(folderPath, &quot;index.mdx&quot;);const backupPath &#x3D; join(folderPath, &quot;index.md&quot;);let filePath;// Check if path is a folder or a fileif (fs.lstatSync(folderPath).isFile()) {filePath &#x3D; folderPath;} else if (fs.existsSync(fullPath)) {filePath &#x3D; fullPath;} else {filePath &#x3D; backupPath;}const fileContents &#x3D; fs.readFileSync(filePath, &quot;utf8&quot;);const newContents &#x3D; options.rewriteMediaUrls? rewriteMedias(folderPath,slug,fileContents,options.rewriteMediaUrls.mediaDirectory,options.rewriteMediaUrls.relativeDirectory): fileContents;const { data, content } &#x3D; matter(newContents);const excerpt &#x3D; createExcerpt(content, options);const { rendered: excerptRendered, code: excerptCode } &#x3D;await createHtmlStringFromMarkdown(excerpt || &quot;&quot;, options);const { rendered: contentRendered, code: contentCode } &#x3D;await createHtmlStringFromMarkdown(content || &quot;&quot;, options);const item: Post &#x3D; {slug: slug,date: slug.split(&quot;-&quot;).slice(0, 3).join(&quot;-&quot;),title: data[&quot;title&quot;] ?? slug,frontmatter: data,contentRaw: content,contentHTML: contentRendered,contentCode,excerptRaw: excerpt,excerptHTML: excerptRendered,excerptCode,};return item;})</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L20">lib/posts.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L20">lib/posts.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -170,7 +170,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/blog.ts#L16">lib/blog.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/blog.ts#L16">lib/blog.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,7 +196,7 @@
 										<li class="tsd-description">
 											<aside class="tsd-sources">
 												<ul>
-													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/blog.ts#L33">lib/blog.ts:33</a></li>
+													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/blog.ts#L33">lib/blog.ts:33</a></li>
 												</ul>
 											</aside>
 											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/post.html" class="tsd-signature-type">Post</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -212,7 +212,7 @@
 										<li class="tsd-description">
 											<aside class="tsd-sources">
 												<ul>
-													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/blog.ts#L20">lib/blog.ts:20</a></li>
+													<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/blog.ts#L20">lib/blog.ts:20</a></li>
 												</ul>
 											</aside>
 											<h4 class="tsd-parameters-title">Parameters</h4>
@@ -239,7 +239,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L90">lib/posts.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L91">lib/posts.ts:91</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -262,7 +262,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L95">lib/posts.ts:95</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L96">lib/posts.ts:96</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -288,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L78">lib/posts.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L79">lib/posts.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/posts.ts#L105">lib/posts.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/posts.ts#L106">lib/posts.ts:106</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -341,7 +341,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L6">lib/options.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L6">lib/options.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -355,7 +355,7 @@
 						<div class="tsd-signature tsd-kind-icon">posts<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L10">lib/options.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L10">lib/options.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -370,7 +370,7 @@
 						<div class="tsd-signature tsd-kind-icon">truncate<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L18">lib/options.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L22">lib/options.ts:22</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -380,7 +380,7 @@
 						<div class="tsd-signature tsd-kind-icon">truncate<wbr>Marker<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&lt;!--truncate--&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L17">lib/options.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L21">lib/options.ts:21</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -390,7 +390,7 @@
 						<div class="tsd-signature tsd-kind-icon">mdx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L19">lib/options.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L23">lib/options.ts:23</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -399,7 +399,7 @@
 							<div class="tsd-signature tsd-kind-icon">components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L20">lib/options.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L24">lib/options.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-type-declaration">
@@ -418,7 +418,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L21">lib/options.ts:21</a></li>
+											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L25">lib/options.ts:25</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -435,7 +435,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L24">lib/options.ts:24</a></li>
+											<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L28">lib/options.ts:28</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -449,7 +449,7 @@
 						<div class="tsd-signature tsd-kind-icon">rewrite<wbr>Media<wbr>Urls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L11">lib/options.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L11">lib/options.ts:11</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -458,12 +458,27 @@
 							<div class="tsd-signature tsd-kind-icon">media<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/37f42da/src/lib/options.ts#L15">lib/options.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L15">lib/options.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>The directory where your media files that are found in markdown should get copied to.</p>
+								</div>
+							</div>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultoptions.rewritemediaurls.relativedirectory" class="tsd-anchor"></a>
+							<h3>relative<wbr>Directory</h3>
+							<div class="tsd-signature tsd-kind-icon">relative<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/idmontie/nextjs-blog-lib/blob/d099e4d/src/lib/options.ts#L19">lib/options.ts:19</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The directory from which your media files should be served.</p>
 								</div>
 							</div>
 						</section>
