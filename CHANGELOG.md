@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.6.0...v1.7.0) (2023-01-08)
+
+
+### Features
+
+* don't memo in dev mode ([4752bdc](https://github.com/idmontie/nextjs-blog-lib/commit/4752bdcf90b41881bfb4bf24c2318290c4b91b78))
+
 ## [1.6.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.5.0...v1.6.0) (2023-01-08)
 
 
