@@ -4,6 +4,7 @@ export interface BlogOptions {
         | false
         | {
               mediaDirectory: string;
+              relativeDirectory: string;
           };
     truncateMarker: string;
     truncateLength: number;

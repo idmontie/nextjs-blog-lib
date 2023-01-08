@@ -43,7 +43,8 @@ export const getPostBySlug = memoize(async function (
               folderPath,
               slug,
               fileContents,
-              options.rewriteMediaUrls.mediaDirectory
+              options.rewriteMediaUrls.mediaDirectory,
+              options.rewriteMediaUrls.relativeDirectory
           )
         : fileContents;
 

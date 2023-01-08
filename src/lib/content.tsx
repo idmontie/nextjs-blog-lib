@@ -15,7 +15,8 @@ export function rewriteMedias(
     baseFilePath: string,
     scope: string,
     markdown: string,
-    mediaDirectory: string
+    mediaDirectory: string,
+    relativeDirectory: string
 ) {
     const mediaPaths: {
         referencePath: string;
@@ -39,7 +40,7 @@ export function rewriteMedias(
 
         markdown = markdown.replace(
             `${prefix}${mediaPath}`,
-            join(scope, mediaPath)
+            join(relativeDirectory, scope, mediaPath)
         );
     }
 

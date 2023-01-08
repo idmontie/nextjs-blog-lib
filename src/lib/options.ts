@@ -13,6 +13,10 @@ export const defaultOptions: BlogOptions = {
          * The directory where your media files that are found in markdown should get copied to.
          */
         mediaDirectory: "",
+        /**
+         * The directory from which your media files should be served.
+         */
+        relativeDirectory: "",
     },
     truncateMarker: "<!--truncate-->",
     truncateLength: 100,
