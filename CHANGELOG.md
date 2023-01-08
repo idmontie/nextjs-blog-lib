@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.5.0...v1.6.0) (2023-01-08)
+
+
+### Features
+
+* add relative media directory option ([74b4c14](https://github.com/idmontie/nextjs-blog-lib/commit/74b4c14d896f6bfd43d83d7ddcf84258e40f6c05))
+
 ## [1.5.0](https://github.com/idmontie/nextjs-blog-lib/compare/v1.4.0...v1.5.0) (2023-01-05)
 
 
