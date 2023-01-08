@@ -4,6 +4,10 @@
  */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function memoize<T extends (...args: any[]) => any>(fn: T): T {
+    if (process.env.NODE_ENV === "development") {
+        return fn;
+    }
+
     const cache = new Map();
     const memoized = (...args: any[]) => {
         const key = JSON.stringify(args);
